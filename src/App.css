@@ -1,0 +1,13 @@
+.carousel-inner > .item {
+    height: 50px;
+};
+
+.container1{
+    height: 800px;
+
+}
+.container2{
+
+    height: 100%;
+    width: 100%
+}
