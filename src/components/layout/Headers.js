@@ -14,11 +14,11 @@ const Headers = () => {
                         {/* <li className="nav-item active">
                             <Link className="nav-link" to="/">Home <span class="sr-only">(current)</span></Link>
                         </li> */}
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/events">Events</Link>
+                        <li className="nav-item active">
+                            <Link className="nav-link" to="/events">Events<span class="sr-only">(current)</span></Link>
                         </li>
-                        <li className="nav-item">
-                            <Link className="nav-link" to="/locations">Locations</Link>
+                        <li className="nav-item active">
+                            <Link className="nav-link" to="/locations">Locations<span class="sr-only">(current)</span></Link>
                         </li>
                         
                     </ul>

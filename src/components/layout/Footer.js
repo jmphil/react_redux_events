@@ -4,7 +4,8 @@ import logo from '../../powered_by_eventbrite.png'
 
 const Footer = () => {
     return (
-        <Navbar bg="light" variant="light" className="sticky">
+
+        <Navbar bg="light" variant="light" className="fixed-bottom">
             <Navbar.Brand href="https://www.eventbrite.com/">
             <img
                 alt="Powered By Eventbrite"
@@ -15,6 +16,7 @@ const Footer = () => {
             />{' '}
             </Navbar.Brand>
         </Navbar>
+        
     )
 }
 

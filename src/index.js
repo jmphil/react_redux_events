@@ -4,11 +4,11 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, NavLink, Switch } from 'react-router-dom'
 import Baselayout from './components/layout/BaseLayout';
-import Classes from './components/Locations';
-import Hooks from './components/Events';
+import Map from './components/Locations';
+import Events from './components/Events';
 import {createStore} from 'redux';
 import { Provider } from "react-redux";
-import reducer from './reducers/reducerTemplate';
+import rootReducer from './reducers/index.js';
 import './index.css';
 
 
@@ -39,7 +39,7 @@ const persistedState = loadFromLocalStorage();
 
 //initializing redux store
 //requires reducer. Second argument is for redux dev-tools extension.
-let store = createStore(reducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+let store = createStore(rootReducer, persistedState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 store.subscribe(()=> {
   //passing in a 
@@ -54,8 +54,8 @@ ReactDOM.render(
         <Baselayout>
           <Switch>
             <Route exact path="/" component={App} />
-            <Route exact path="/hooks" component={Hooks} />
-            <Route exact path="/classes" component={Classes} />
+            <Route exact path="/locations" component={Map} />
+            <Route exact path="/events" component={Events} />
           </Switch>
         </Baselayout>
       </Router>
