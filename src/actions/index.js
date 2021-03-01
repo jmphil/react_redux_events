@@ -1,5 +1,5 @@
 
-//this is an aciton creator and it return an obj{}
+//this is an aciton creator and it returns an obj{}
 const updateEvents = (dispatch, events) => {
     dispatch({
         type: 'UPDATE_EVENTS',
