@@ -33,7 +33,7 @@ Other Tools:
 
 <h3><u>Base Objectives:</u></h3>
 <ul>
-    <li>Landing page with how to site works</li>
+    <li>Landing page</li>
     <li>Page to search events</li>
     <li>Page to view events on a map</li>
 </ul>
