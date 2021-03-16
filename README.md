@@ -5,8 +5,8 @@
 <h4>Eventurley is a simple tool that allows users to search for local events.</h4>
 
 </br>
-<img src="">
-<img src="">
+<img src="./imgages/Eventurley.png">
+
 
 
 
@@ -23,7 +23,7 @@ Other Tools:
 <ul>
     <li>React</li>
     <li>Redux</li>
-    <li>Material-UI</li>
+    <li>Bootstrap</li>
     <li>Eventbrite API</li>
     <li>Mapbox API</li>
     
