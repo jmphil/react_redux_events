@@ -1,6 +1,6 @@
 const initialState = {
-    // events: [],
-    city: ''
+    events: '',
+    city: 'Atlanta'
   };
   
   const eventsReducer = (state = initialState, action) => {

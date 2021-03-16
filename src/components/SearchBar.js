@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button, InputGroup, FormControl} from 'react-bootstrap'
 import {connect} from 'react-redux';
-import {updateSearch, getEvents} from '../actions';
+import {updateSearch, updateEvents} from '../actions';
 import '../assets/SearchBar.css';
 
 class SearchBar extends Component {
@@ -11,9 +11,9 @@ class SearchBar extends Component {
     updateSearch(text);
   }
   handleSubmit(e) {
-    const {getEvents,city} = this.props;
+    const {fetchEvents,city} = this.props;
     e.preventDefault();
-    getEvents(city);
+    updateEvents(city);
   }
   render() {
     return (
@@ -33,12 +33,9 @@ class SearchBar extends Component {
   }
 }
 function mapStateToProps(state) {
+  
   const {city} = state.data;
-    return {city};
+  return {city};
+
 }
-export default connect(
-  mapStateToProps, {
-    updateSearch,
-    getEvents
-  }
-)(SearchBar);
+export default connect(mapStateToProps, { updateSearch, updateEvents})(SearchBar);
