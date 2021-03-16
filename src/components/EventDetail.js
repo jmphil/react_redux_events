@@ -2,11 +2,11 @@ import React, {Component} from 'react';
 import '../assets/EventDetail.css';
 
 class EventDetail extends Component {
-	state = {
-		place: {},
-        placeLoaded: false,
-        flipped: false
-	}
+	// state = {
+	// 	place: {},
+    //     placeLoaded: false,
+    //     flipped: false
+	// }
 	handleClick() {
 
         const events = require()

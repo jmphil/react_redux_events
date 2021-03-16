@@ -1,28 +1,29 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useDispatch, useSelector,} from 'react-redux';
 import { connect } from 'react-redux';
 import Header from './Header';
 import EventList from './EventList';
-import {updateSearch, getEvents} from '../actions';
+import {updateEvents, updateSearch } from '../actions';
 
 
 const Events = () => {
     const event = useSelector(state => state.event);
     //recieve dispatch function
-    const dispatch = useDispatch();
-
-    // useEffect(() => {
-    //     const getData = async () => {
-    //         let result = await fetch('/api')
-    //         let data = await result.json();
+    // const dispatch = useDispatch();
+    const [events, setEvents] = useState([]);
+    
+    useEffect(() => {
+        const fetchEvents = async () => {
+            let result = await fetch(`https://www.eventbriteapi.com/v3/events/search/?token=${process.env.REACT_APP_EVENTRBITE}`)
+            let data = await result.json();
             
-    //         console.log(data)
-    //     }
-    //     getData()
-    // }, [])
+            console.log(data)
+        }
+        fetchEvents()
+    }, [])
     
 
-    let {events} = getEvents();
+    // dispatch(events);
     
     return (<>
     <div className="App">
